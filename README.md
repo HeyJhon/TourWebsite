@@ -9,7 +9,7 @@ NOTA: El script anno.js que viene adjunto se modificó para que al final del tou
 
 2.- Para usarlo solo hay que crear una instancia de tipo Anno con un array de propiedades para cada step que vamos a mostrar.
 
-  var tour = new Anno([{
+var tour = new Anno([{
                     target: '#txtBuscar',
                     position: 'center-right',
                     content: "Te presentamos el campo de Busqueda.",
@@ -21,7 +21,8 @@ NOTA: El script anno.js que viene adjunto se modificó para que al final del tou
                     content: "Comienza a buscar",
                     buttons: [AnnoButton.BackButton, AnnoButton.DoneButton, AnnoButton.NotAgainButton]
                 }])
-		
+
+
 NOTA: AnnoButton.NotAgainButton es un botón personalizado que no existe originalmente en la biblioteca, con este logramos que no se vuelva a mostrar nunca más el tour.
 
 3.- La  variable tourName se crea y se almacena en el localStorage del navegador en el momento que se le dé clic al botón No volver a mostrar. Mientras esa variable sea null seguiremos mostrando el tour.
