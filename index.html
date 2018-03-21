@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Tour</title>
+	
+	<link rel="stylesheet" href="anno.css">
+		<link rel="stylesheet" href="bootstrap.css">
+  </head>
+  <body>
+  
+  <div class="container">
+  
+	<div class="jumbotron">
+	  <h1 class="display-4">Usando Tour!</h1>
+	  <p class="lead">Este es un ejemplo para utlizar Anno.JS y hacer visitas guiadas.</p>
+	  <hr class="my-4">
+	  <p>Checa el código HTML de esta pagina para ver como funciona esta Biblioteca.</p>
+	  <p class="lead">
+	  
+	  <input type = "text" id="txtBuscar"> </input>
+		<a class="btn btn-primary btn-lg" href="http://iamdanfox.github.io/anno.js/" role="button">Más ejemplos</a>
+	  </p>
+	</div>
+
+  </div>
+  
+      <script src="jquery-3.3.1.js"></script>
+    <script src="anno.js"></script>
+	
+	<script type="text/javascript">
+	
+	
+                var tour = new Anno([{
+                    target: '#txtBuscar',
+                    position: 'center-right',
+                    content: "Te presentamos el campo de Busqueda.",
+                    buttons: [AnnoButton.NextButton]
+                },
+                {
+                    target: '#txtBuscar',
+                    position: 'center-right',
+                    content: "Comienza a buscar",
+                    buttons: [AnnoButton.BackButton, AnnoButton.DoneButton, AnnoButton.NotAgainButton]
+                }])
+				
+				
+                $(document).ready(function () {                  
+
+				tourName = "tourCatalogo";
+
+                    if (localStorage.getItem(tourName) == null) {
+                        tour.show();
+                    }
+
+
+
+                });
+	</script>
+  </body>
+</html>
